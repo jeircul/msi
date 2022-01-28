@@ -6,7 +6,7 @@ Configuration InstallMSI {
     {
         MsiPackage Powershell7
         {
-            ProductId = '{395BA042-240F-404D-8B49-BDC2E812DBE5}'
+            ProductId = '{11E117C7-01D0-4C4E-9096-2E90843A173E}'
             Path = 'https://github.com/PowerShell/PowerShell/releases/download/v7.2.1/PowerShell-7.2.1-win-x64.msi'
             Ensure = 'Present'
         }

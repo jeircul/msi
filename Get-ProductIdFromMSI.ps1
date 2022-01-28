@@ -1,5 +1,5 @@
 # Vars
-$msiPath = 'C:\Users\ove.aursland\Downloads\googlechromestandaloneenterprise64.msi'
+$msiPath = 'C:\Users\ove.aursland\Downloads\PowerShell-7.2.1-win-x64.msi'
 
 # Definition
 $sig = @'
