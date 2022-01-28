@@ -1,19 +1,30 @@
 /*
 @TargetNode='localhost'
 @GeneratedBy=ove.aursland
-@GenerationDate=01/27/2022 11:08:41
+@GenerationDate=01/28/2022 11:07:54
 @GenerationHost=PF34SMD2
 */
 
 instance of MSFT_MsiPackage as $MSFT_MsiPackage1ref
 {
-SourceInfo = "::7::9::MsiPackage";
- Path = "https://github.com/jeircul/msi/raw/master/googlechromestandaloneenterprise64.msi";
+ModuleName = "PSDscResources";
+ ProductId = "{395BA042-240F-404D-8B49-BDC2E812DBE5}";
+ Ensure = "Present";
+ Path = "https://github.com/PowerShell/PowerShell/releases/download/v7.2.1/PowerShell-7.2.1-win-x64.msi";
+ SourceInfo = "::7::9::MsiPackage";
  ModuleVersion = "2.12.0.0";
- ModuleName = "PSDscResources";
- Ensure = "Absent";
- ResourceID = "[MsiPackage]Chrome";
- ProductId = "{9ABC27FD-AA4B-3C50-B76B-38FCFFCCDB03}";
+ ResourceID = "[MsiPackage]Powershell7";
+ ConfigurationName = "InstallMSI";
+};
+instance of MSFT_MsiPackage as $MSFT_MsiPackage2ref
+{
+ModuleName = "PSDscResources";
+ ProductId = "{9ABC27FD-AA4B-3C50-B76B-38FCFFCCDB03}";
+ Ensure = "Present";
+ Path = "https://github.com/jeircul/msi/raw/master/googlechromestandaloneenterprise64.msi";
+ SourceInfo = "::13::9::MsiPackage";
+ ModuleVersion = "2.12.0.0";
+ ResourceID = "[MsiPackage]Chrome";
  ConfigurationName = "InstallMSI";
 };
 instance of OMI_ConfigurationDocument
@@ -27,7 +38,7 @@ instance of OMI_ConfigurationDocument
 
                         Author="ove.aursland";
 
-                        GenerationDate="01/27/2022 11:08:41";
+                        GenerationDate="01/28/2022 11:07:54";
 
                         GenerationHost="PF34SMD2";
 
