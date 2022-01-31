@@ -12,13 +12,13 @@ New-GuestConfigurationPackage `
 # Make zip available on github
 
 # Create policy
-$ContentURIMSI = 'https://github.com/jeircul/msi/raw/master/InstallMSI/InstallMSI.zip'
+$ContentURIMSI = 'https://github.com/jeircul/msi/raw/master/InstallMSIv2/InstallMSIv2.zip'
 New-GuestConfigurationPolicy `
-  -PolicyId 'VM-Guest-Policy-MSI' `
+  -PolicyId 'VM-Guest-Policy-MSIv2' `
   -ContentUri $ContentURIMSI `
-  -DisplayName 'VM Guest Policy MSI Deploy' `
+  -DisplayName 'VM Guest Policy MSI Deploy v2' `
   -Description 'This Policy deploys several software applications on the Server' `
-  -Path '.\policy' `
+  -Path '.\policyv2' `
   -Platform 'Windows' `
   -Version 1.0.0 `
   -Mode 'ApplyAndAutoCorrect' `
@@ -27,8 +27,8 @@ New-GuestConfigurationPolicy `
 # Publish policy
 $Subscription = Get-AzSubscription -SubscriptionName 'Q901-platform-dev'
 New-AzPolicyDefinition `
-    -Name 'VM-Guest-Policy-MSI' `
-    -Policy 'policy\DeployIfNotExists.json' `
+    -Name 'VM-Guest-Policy-MSI-v2' `
+    -Policy 'policyv2\DeployIfNotExists.json' `
     -SubscriptionId $($Subscription.Id)
 
 
