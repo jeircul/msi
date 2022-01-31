@@ -30,3 +30,6 @@ New-AzPolicyDefinition `
     -Name 'VM-Guest-Policy-MSI' `
     -Policy 'policy\DeployIfNotExists.json' `
     -SubscriptionId $($Subscription.Id)
+
+
+# Get-AzPolicyState -PolicyDefinitionName 'VM-Guest-Policy-MSI' 
