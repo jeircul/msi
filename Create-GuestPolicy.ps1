@@ -32,4 +32,6 @@ New-AzPolicyDefinition `
     -SubscriptionId $($Subscription.Id)
 
 
-Get-AzPolicyState -PolicyDefinitionName 'VM-Guest-Policy-MSI' 
+# Test commands
+Get-AzPolicyState -PolicyDefinitionName 'VM-Guest-Policy-MSI-v2'
+Start-AzPolicyComplianceScan -ResourceGroupName 'rg-ovea' -Verbose
