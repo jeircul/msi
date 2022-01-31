@@ -4,8 +4,8 @@
 
 # Make zip package
 New-GuestConfigurationPackage `
-  -Name 'InstallMSI' `
-  -Configuration 'InstallMSI\localhost.mof' `
+  -Name 'InstallMSIv2' `
+  -Configuration 'InstallMSIv2\localhost.mof' `
   -Type AuditAndSet `
   -Force
   
@@ -32,4 +32,4 @@ New-AzPolicyDefinition `
     -SubscriptionId $($Subscription.Id)
 
 
-# Get-AzPolicyState -PolicyDefinitionName 'VM-Guest-Policy-MSI' 
+Get-AzPolicyState -PolicyDefinitionName 'VM-Guest-Policy-MSI' 
